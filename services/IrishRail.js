@@ -2,12 +2,11 @@ import { parseString } from 'xml2js';
 import util from 'util';
 import { STATION_LIST } from '../constants';
 
-const LOCAL_PROXY_URL = 'https://thingproxy.freeboard.io/fetch/';
+// The proxy is used locally for CORS issues, and in production to
+// avoid issues with requesting an insecure HTTP endpoint
+const HTTPS_PROXY_URL = 'https://thingproxy.freeboard.io/fetch/';
 const IRISH_RAIL_API_URL = 'http://api.irishrail.ie/realtime/realtime.asmx';
-const API_URL =
-  process.env.NODE_ENV === 'development'
-    ? `${LOCAL_PROXY_URL}${IRISH_RAIL_API_URL}`
-    : IRISH_RAIL_API_URL;
+const API_URL = `${HTTPS_PROXY_URL}${IRISH_RAIL_API_URL}`;
 
 const makeApiRequest = async (endpoint) => {
   try {

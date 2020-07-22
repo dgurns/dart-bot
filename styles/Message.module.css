@@ -1,0 +1,15 @@
+.message {
+  border-radius: 6px;
+  margin: 15px;
+  padding: 5px 15px;
+}
+
+.botMessage {
+  background-color: lightpink;
+  margin-right: 20%;
+}
+
+.userMessage {
+  background-color: lightgreen;
+  margin-left: 20%;
+}

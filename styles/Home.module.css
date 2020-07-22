@@ -1,0 +1,15 @@
+.pageContent {
+  align-items: center;
+  display: flex;
+  background-color: #ececec;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.chatBox {
+  height: 100%;
+  max-width: 600px;
+  padding: 20px;
+  width: 100%;
+}

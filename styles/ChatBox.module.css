@@ -1,0 +1,22 @@
+.container {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.textInput {
+  border-radius: 0 0 6px 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  height: 100px;
+  padding: 15px;
+}

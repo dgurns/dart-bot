@@ -1,16 +1,20 @@
 import Head from 'next/head';
+import ChatBox from 'components/ChatBox';
+import styles from 'styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>DartBot</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Welcome to DartBot</h1>
+      <main className={styles.pageContent}>
+        <div className={styles.chatBox}>
+          <ChatBox />
+        </div>
       </main>
-    </div>
+    </>
   );
 }

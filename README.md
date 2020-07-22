@@ -4,6 +4,8 @@ Try it out at [https://dart-bot.vercel.app/](https://dart-bot.vercel.app/)
 
 The app is built with [Next.js](https://nextjs.org/), React, and CSS modules.
 
+It utilizes the [IrishRail Realtime API](http://api.irishrail.ie/realtime/)
+
 ## Run locally
 
 Clone the project to your computer and run the development server:

@@ -1,5 +1,7 @@
 This is a simple chat bot which will tell you a list of DART stations or upcoming trains from a given station. Try asking it "Tell me a list of stations" or "Get me upcoming trains from Bray". 
 
+Try it out at [https://dart-bot.vercel.app/](https://dart-bot.vercel.app/)
+
 The app is built with [Next.js](https://nextjs.org/), React, and CSS modules.
 
 ## Run locally

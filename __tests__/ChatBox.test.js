@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { upcomingTrainsResponse } from 'pages/api/__mocks__/upcoming-trains';
 import IrishRail from 'services/IrishRail';
-import ChatBox from './ChatBox';
+import ChatBox from 'components/ChatBox';
 
 describe('ChatBox', () => {
   it('should render a default message from the bot', () => {

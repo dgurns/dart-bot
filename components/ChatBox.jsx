@@ -10,7 +10,7 @@ export default function ChatBox() {
   const defaultMessage = {
     type: MESSAGE_TYPES.bot,
     text:
-      'Go ahead, ask me something about DART times! For example, "When are the next trains at Bray?"',
+      'Go ahead, ask me something about DART times! For example, "When are the next trains departing from Bray?" or "Tell me the stations"',
   };
   const [messages, setMessages] = useState([defaultMessage]);
   const [enteredText, setEnteredText] = useState('');
@@ -25,10 +25,12 @@ export default function ChatBox() {
   }, [messages]);
 
   useEffect(() => {
-    messagesRef.current.scrollTo({
-      top: messagesRef.current.scrollHeight,
-      behavior: 'smooth',
-    });
+    if (messagesRef.current.scrollTo) {
+      messagesRef.current.scrollTo({
+        top: messagesRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
   }, [messages, messagesRef]);
 
   const onKeyDown = (event) => {

@@ -3,14 +3,19 @@ import { parseString } from 'xml2js';
 
 // The proxy is used locally for CORS issues, and in production to
 // avoid issues with requesting an insecure HTTP endpoint
-const HTTPS_PROXY_URL = 'https://thingproxy.freeboard.io/fetch/';
+const HTTPS_PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
 const IRISH_RAIL_API_URL = 'http://api.irishrail.ie/realtime/realtime.asmx';
 const API_URL = `${HTTPS_PROXY_URL}${IRISH_RAIL_API_URL}`;
 
 export default async (req, res) => {
   const stationName = req.query?.stationName;
   const response = await fetch(
-    `${API_URL}/getStationDataByNameXML?StationDesc=${stationName}`
+    `${API_URL}/getStationDataByNameXML?StationDesc=${stationName}`,
+    {
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+    }
   );
   const responseText = await response.text();
   const promisifiedParseString = util.promisify(parseString);

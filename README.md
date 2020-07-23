@@ -1,4 +1,4 @@
-This is a simple chat bot which will tell you a list of DART stations or upcoming trains from a given station. Try asking it "Tell me a list of stations" or "Get me upcoming trains from Bray". 
+This is a simple chat bot which will tell you a list of DART stations or upcoming trains from a given station. Try asking it "Tell me a list of stations" or "Get me upcoming trains from Bray".
 
 Try it out at [https://dart-bot.vercel.app/](https://dart-bot.vercel.app/)
 
@@ -8,11 +8,9 @@ It utilizes the [IrishRail Realtime API](http://api.irishrail.ie/realtime/)
 
 ## Run locally
 
-Clone the project to your computer and run the development server:
+Clone the project to your computer, install dependencies via `yarn install` and run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 

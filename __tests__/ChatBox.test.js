@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { upcomingTrainsResponse } from 'pages/api/__mocks__/upcoming-trains';
+import { upcomingTrainsResponse } from '__mocks__/upcoming-trains';
 import IrishRail from 'services/IrishRail';
 import ChatBox from 'components/ChatBox';
 

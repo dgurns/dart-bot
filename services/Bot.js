@@ -12,7 +12,7 @@ const checkForTrigger = (messageText, triggers) => {
     const sanitizedTrigger = trigger.toLowerCase();
     const indexOfTrigger = sanitizedMessageText.indexOf(sanitizedTrigger);
     if (indexOfTrigger > -1) {
-      triggerLocation = {
+      return {
         index: indexOfTrigger,
         length: trigger.length,
       };

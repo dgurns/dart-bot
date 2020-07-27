@@ -42,7 +42,7 @@ describe('ChatBox', () => {
 
   it('should respond with upcoming train times for a given station', async () => {
     jest
-      .spyOn(IrishRail, 'getNextTwoTrainsAtStation')
+      .spyOn(IrishRail, 'getNextTrainsAtStation')
       .mockReturnValue(Promise.resolve(upcomingTrainsResponse.slice(0, 2)));
 
     render(<ChatBox />);
@@ -59,7 +59,7 @@ describe('ChatBox', () => {
 
     await waitFor(() => {
       screen.getByText(
-        /Next two trains departing from Howth: To Howth at 00:00, To Howth at 00:00/i
+        /Next trains departing from Howth: To Howth at 00:00, To Howth at 00:00/i
       );
     });
   });

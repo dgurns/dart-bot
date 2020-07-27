@@ -2,7 +2,7 @@ import { STATION_LIST } from '../constants';
 
 const getStationList = () => STATION_LIST;
 
-const getNextTwoTrainsAtStation = async (stationName) => {
+const getNextTrainsAtStation = async (stationName) => {
   try {
     const response = await fetch(
       `/api/upcoming-trains?stationName=${encodeURIComponent(stationName)}`
@@ -20,7 +20,7 @@ const getNextTwoTrainsAtStation = async (stationName) => {
         return a.Expdepart[0] > b.Expdepart[0];
       }
     });
-    return sortedUpcomingTrains.slice(0, 2);
+    return sortedUpcomingTrains.slice(0, 4);
   } catch {
     return [];
   }
@@ -28,5 +28,5 @@ const getNextTwoTrainsAtStation = async (stationName) => {
 
 export default {
   getStationList,
-  getNextTwoTrainsAtStation,
+  getNextTrainsAtStation,
 };

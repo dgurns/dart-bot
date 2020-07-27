@@ -6,7 +6,6 @@ const TRIGGERS = {
 };
 
 const checkForTrigger = (messageText, triggers) => {
-  let triggerLocation = null;
   triggers.forEach((trigger) => {
     const sanitizedMessageText = messageText.toLowerCase();
     const sanitizedTrigger = trigger.toLowerCase();
@@ -18,7 +17,7 @@ const checkForTrigger = (messageText, triggers) => {
       };
     }
   });
-  return triggerLocation;
+  return null;
 };
 
 const respondToUserMessage = (messageText) => {
